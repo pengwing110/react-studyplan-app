@@ -1,16 +1,36 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React Study Plan App
+**리액트**로 만든 *스터디 플랜 앱*입니다. filter/sort/map/find 메소드로 데이터를 정렬하고, 조건에 맞는 필터 기능을 포함하고 있습니다. 
 
-Currently, two official plugins are available:
+아이템을 js에 저장하고 `fetch 구문`으로 목록처럼 보여지도록 했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 설치된 라이브러리
+- react-router-dom -> 페이지 연결
+- react-swiper -> 스와이퍼 
+- react-tabs -> 탭기능
+- react-styled-componenets -> 스타일컴포넌트
 
-## React Compiler
+#### 과정 추가 버튼 함수 
+```
+function addTodo() {
+    if (inputValue.trim === '') return
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    const newTodo = {
+      id: Date.now(), 
+      text: inputValue
+    }
 
-## Expanding the ESLint configuration
+    setTodos([...todos, newTodo]);
+    setInputValue('') //리셋해주는 작업
+  }
+  ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  #### 배포
+  > github의 정적인 배포 환경에서 리액트의 동적 환경이 충돌되는 문제로 배포과정의 불필요한 코드들을 추가하는 부분은 vercel로 배포하면서 해결을 했다.
+
+  ---
+  배포된 주소는 [studyplan App](https://react-studyplan-app.vercel.app/) 입니다.
+  
+  #### 썸네일
+  ![studyplan App](./public/images/study-plan-thumnail.png)
