@@ -33,4 +33,4 @@ function addTodo() {
   배포된 주소는 [studyplan App](https://react-studyplan-app.vercel.app/) 입니다.
   
   #### 썸네일
-  ![studyplan App](./public/images/study-plan-thumnail.png)
+![studyplan App](public/images/study-plan-thumbnail.png)
